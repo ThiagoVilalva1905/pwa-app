@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+    <link rel="stylesheet" href="styleQ1234.css">
+</head>
+<body>
+    <div class="cx_perguntas">
+        <div class="pergunta">
+            <span>Que nome leva o limite territorial que divide dois países?</span>
+        </div>
+        <div class="alternativas">
+            <label>
+                <input type="radio" name="a1" value="Errou">
+                <span>Divisa</span>
+            </label>
+        </div>
+        <div class="alternativas">
+            <label>
+                <input type="radio" name="a1" value="Errou">
+                <span>Linha</span>
+            </label>
+        </div>
+        <div class="alternativas">
+            <label>
+                <input type="radio" name="a1" value="Errou">
+                <span>Rua</span>
+            </label>
+        </div>
+        <div class="alternativas">
+            <label>
+                <input type="radio" name="a1" value="Acertou">
+                <span>Fronteira</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="btnEnv">
+        <button class="btnEnviar" onclick="salvarResposta('a1')">Enviar</button>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar"></div>
+    </div>
+
+    <div class="btnS">
+        <a href="Quiz.html" onclick="sessionStorage.clear();"><button class="btnSair">Sair para o menu</button></a>
+    </div>
+    
+    <script>
+        function salvarResposta(pergunta) {
+            const selectedAnswer = document.querySelector(`input[name="${pergunta}"]:checked`);
+            const respostaCorreta = document.querySelector(`input[name="${pergunta}"][value="Acertou"]`);
+            
+            if (selectedAnswer) {
+                // Set background color based on correct/incorrect answer
+                if (selectedAnswer.value === "Acertou") {
+                    selectedAnswer.parentElement.style.backgroundColor = "green";
+                    let correctAnswers = parseInt(sessionStorage.getItem('correctAnswers') || '0', 10);
+                    sessionStorage.setItem('correctAnswers', correctAnswers + 1);
+                } else {
+                    selectedAnswer.parentElement.style.backgroundColor = "red";
+                    respostaCorreta.parentElement.style.backgroundColor = "green";
+                }
+                sessionStorage.setItem(pergunta, selectedAnswer.value);
+
+                // Atualiza o índice da pergunta respondida
+                let currentQuestionIndex = parseInt(sessionStorage.getItem('currentQuestionIndex'), 10) || 0; 
+                currentQuestionIndex++; 
+                sessionStorage.setItem('currentQuestionIndex', currentQuestionIndex);
+
+                // Atualiza a barra de progresso
+                updateProgressBar();
+
+                setTimeout(() => {
+                    nextQuestion();
+                }, 1000);
+            } else {
+                alert("Por favor, selecione uma alternativa antes de enviar.");
+            }
+        }
+
+        function nextQuestion() {
+            const questionsOrder = JSON.parse(sessionStorage.getItem('questionsOrder'));
+            let currentQuestionIndex = parseInt(sessionStorage.getItem('currentQuestionIndex'), 10); 
+
+            if (currentQuestionIndex < questionsOrder.length) {
+                window.location.href = questionsOrder[currentQuestionIndex];
+            } else {
+                window.location.href = 'feedback_aluno.html';
+            }
+        }
+
+        function startQuiz(random = true) {
+            const questions = ["Q1.html", "Q2.html", "Q3.html", "Q4.html", "Q5.html", "Q6.html", "Q7.html", "Q8.html", "Q9.html"];
+            const questionsOrder = random ? shuffle([...questions]) : [...questions];
+            sessionStorage.setItem('questionsOrder', JSON.stringify(questionsOrder));
+            sessionStorage.setItem('currentQuestionIndex', 0);
+            sessionStorage.setItem('correctAnswers', 0); // Initialize correct answers count
+
+            // Atualiza a barra de progresso ao iniciar o quiz
+            updateProgressBar();
+        }
+
+        function updateProgressBar() {
+            const totalPerguntas = JSON.parse(sessionStorage.getItem('questionsOrder')).length;
+            const currentQuestionIndex = parseInt(sessionStorage.getItem('currentQuestionIndex'), 10) || 0;
+            const progresso = (currentQuestionIndex / totalPerguntas) * 100;
+            document.querySelector('.progress-bar').style.width = `${progresso}%`;
+        }
+
+        // Shuffle function to randomize questions
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (!sessionStorage.getItem("questionsOrder")) {
+                startQuiz(false);
+            } else {
+                updateProgressBar();  // Atualiza a barra caso já tenha um progresso salvo
+            }
+        });
+    </script>
+</body>
+</html>
+

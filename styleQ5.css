@@ -1,0 +1,402 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    /* text-decoration: none; */
+}
+
+body { 
+    background-image: url('pantanal2.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;  
+}
+
+/* Estilos para Smartphones (telas pequenas) */
+@media (max-width: 600px) {
+
+    .cx_perguntas {        
+        margin-top: 12%;        
+        width: 91%;        
+        height: 540px;        
+        background-color: #ffffffee;        
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);        
+        border-radius: 15px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto;    
+    }    
+    .pergunta {        
+        background-color: rgb(83, 59, 15);        
+        color: #fff;        
+        padding: 8px;        
+        border-radius: 20px 20px 0 0;        
+        font-size: 18px;    
+    }    
+    .alternativas {        
+        margin-top: 20px;        
+        margin-left: 15px;    
+    }    
+    .alternativas label {        
+        display: block;        
+        padding: 5px;        
+        border: 1px solid #ddd;        
+        margin-right: 2%;        
+        cursor: pointer;        
+        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out, background-color 100ms ease-in-out;        
+        box-shadow: 2px 2px 2px 2px rgb(83, 59, 15);    
+    }    
+    .alternativas input {        
+        display: none;    
+    }    
+    .alternativas input:checked + span {        
+        background-color: #add8e6; /* cor de fundo azul para a alternativa selecionada */    
+        display: block;
+        padding: 10px;
+        border: 0px solid #ddd;
+        margin: 0px;
+        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out, background-color 100ms ease-in-out;
+    }    
+    .alternativas span {        
+        font-size: 18px;        
+        color: #000;    
+    }      
+     
+    .btnEnv{
+        margin-top: -58px;
+        margin-left: 75%;
+    }
+
+    .btnEnviar{
+        font-size: 18px;
+        background: rgb(83, 59, 15);
+        color:#fff;
+        width: 70px;   
+        height: 28px;     
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgb(26, 25, 25); 
+    }
+
+    .progress {        
+        margin-top: 2.2%;        
+        margin-left: auto;        
+        margin-right: auto;        
+        background-color: rgb(83, 59, 15);        
+        height: 10px;        
+        width: 85%;    
+    }    
+    .progress-bar {        
+        background-color: #4caf50;        
+        height: 100%;    
+    }    
+
+    .btnS {           
+        margin-top: 5%;        
+        text-align: center;
+    } 
+    .btnSair {  
+        height: 35px;
+        width: 55%;              
+        border-radius: 20px;        
+        font-size: 22px;        
+        box-shadow: 10px 10px 10px rgb(26, 25, 25);        
+        box-sizing: border-box;        
+        transition: transform 100ms ease-in-out;    
+    }
+    .btnSair:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+}
+
+/* Estilos para Tablets (telas médias) - 768/1024 x 768 */
+@media (min-width: 601px) and (max-width: 1024px) {
+    
+    .cx_perguntas {        
+        margin-top: 5.5%;        
+        width: 89%;        
+        height: 570px;        
+        background-color: #ffffffee;        
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);        
+        border-radius: 15px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto;    
+    }    
+    .pergunta {        
+        background-color: rgb(83, 59, 15);        
+        color: #fff;        
+        padding: 8px;        
+        border-radius: 20px 20px 0 0;        
+        font-size: 25px;    
+    }    
+    .alternativas {        
+        margin-top: 20px;        
+        margin-left: 15px;    
+    }    
+    .alternativas label {        
+        display: block;        
+        padding: 10px;        
+        border: 1px solid #ddd;        
+        margin-right: 2%;        
+        cursor: pointer;        
+        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out, background-color 100ms ease-in-out;        
+        box-shadow: 2px 2px 2px 2px rgb(83, 59, 15);    
+    }    
+    .alternativas input {        
+        display: none;    
+    }    
+    .alternativas input:checked + span {        
+        background-color: #add8e6; /* cor de fundo azul para a alternativa selecionada */    
+        display: block;
+        padding: 10px;
+        border: 0px solid #ddd;
+        margin: 0px;
+        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out, background-color 100ms ease-in-out;
+    }    
+    .alternativas span {        
+        font-size: 23px;        
+        color: #000;    
+    }      
+     
+    .btnEnv{
+        margin-top: -78px;
+        margin-left: 81%;
+    }
+
+    .btnEnviar{
+        font-size: 22px;
+        background: rgb(83, 59, 15);
+        color:#fff;
+        width: 90px;   
+        height: 35px;     
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgb(26, 25, 25); 
+    }
+
+    .progress {        
+        margin-top: 1.7%;        
+        margin-left: auto;        
+        margin-right: auto;        
+        background-color: rgb(83, 59, 15);        
+        height: 15px;        
+        width: 85%;    
+    }    
+    .progress-bar {        
+        background-color: #4caf50;        
+        height: 100%;    
+    }    
+
+    .btnS {           
+        margin-top: 3%;        
+        text-align: center;
+    } 
+    .btnSair {  
+        height: 45px;
+        width: 40%;              
+        border-radius: 20px;        
+        font-size: 30px;        
+        box-shadow: 10px 10px 10px rgb(26, 25, 25);        
+        box-sizing: border-box;        
+        transition: transform 100ms ease-in-out;    
+    }
+    .btnSair:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+
+/* Estilos para Computadores (telas grandes) - 1280/1366 x 768 */
+@media (min-width: 1025px) and (max-width: 1919px) {     
+    .cx_perguntas {        
+        margin-top: 4%;        
+        width: 72%;        
+        height: 530px;        
+        background-color: #ffffffee;        
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);      
+        border-radius: 15px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto;    
+    }    
+    .pergunta {        
+        background-color: rgb(83, 59, 15);        
+        color: #fff;        
+        padding: 12px;        
+        border-radius: 20px 20px 0 0;        
+        font-size: 27px;    
+    }    
+    .alternativas {        
+        margin-top: 20px;        
+        margin-left: 15px;    
+    }    
+    .alternativas label {        
+        display: block;        
+        padding: 5px;        
+        border: 1px solid #ddd;        
+        margin-right: 2%;        
+        cursor: pointer;        
+        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out, background-color 100ms ease-in-out;        
+        box-shadow: 2px 2px 2px 2px rgb(83, 59, 15);    
+    }    
+    .alternativas input {        
+        display: none;    
+    }    
+    .alternativas input:checked + span {        
+        background-color: #add8e6; /* cor de fundo azul para a alternativa selecionada */    
+        display: block;
+        padding: 10px;
+        border: 0px solid #ddd;
+        margin: 0px;
+        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out, background-color 100ms ease-in-out;
+    }    
+    .alternativas span {        
+        font-size: 22px;        
+        color: #000;    
+    }      
+     
+    .btnEnv{
+        margin-top: -85px;
+        margin-left: 78%;
+    }
+
+    .btnEnviar{
+        font-size: 22px;
+        background: rgb(83, 59, 15);
+        color:#fff;
+        width: 80px;   
+        height: 35px;     
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px rgba(26, 25, 25, 0.8); 
+    }
+
+    .progress {        
+        margin-top: 1.1%;        
+        margin-left: auto;        
+        margin-right: auto;        
+        background-color: rgb(83, 59, 15);        
+        height: 15px;        
+        width: 68%;    
+    }    
+    .progress-bar {        
+        background-color: #4caf50;        
+        height: 100%;    
+    }    
+
+    .btnS {           
+        margin-top: 3%;        
+        text-align: center;
+    } 
+    .btnSair {  
+        height: 35px;
+        width: 285px;              
+        border-radius: 20px;        
+        font-size: 28px;        
+        box-shadow: 5px 5px 5px rgba(26, 25, 25, 0.8);        
+        box-sizing: border-box;        
+        transition: transform 100ms ease-in-out;   
+    }
+    .btnSair:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+
+/* Estilos para Televisões (telas extra grandes) */
+@media (min-width: 1920px) {    
+    .cx_perguntas {        
+        margin-top: 6%;        
+        width: 72%;        
+        height: 680px;        
+        background-color: #ffffffee;        
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);      
+        border-radius: 15px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto;    
+    }    
+    .pergunta {        
+        background-color: rgb(83, 59, 15);        
+        color: #fff;        
+        padding: 12px;        
+        border-radius: 20px 20px 0 0;        
+        font-size: 35px;    
+    }    
+    .alternativas {        
+        margin-top: 20px;        
+        margin-left: 15px;    
+    }    
+    .alternativas label {        
+        display: block;        
+        padding: 5px;        
+        border: 1px solid #ddd;        
+        margin-right: 2%;        
+        cursor: pointer;        
+        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out, background-color 100ms ease-in-out;        
+        box-shadow: 2px 2px 2px 2px rgb(83, 59, 15);    
+    }    
+    .alternativas input {        
+        display: none;    
+    }    
+    .alternativas input:checked + span {        
+        background-color: #add8e6; /* cor de fundo azul para a alternativa selecionada */    
+        display: block;
+        padding: 10px;
+        border: 0px solid #ddd;
+        margin: 0px;
+        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out, background-color 100ms ease-in-out;
+    }    
+    .alternativas span {        
+        font-size: 35px;        
+        color: #000;    
+    }      
+     
+    .btnEnv{
+        margin-top: -110px;
+        margin-left: 78%;
+    }
+
+    .btnEnviar{
+        font-size: 30px;
+        background: rgb(83, 59, 15);
+        color:#fff;
+        width: 120px;   
+        height: 50px;     
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px rgba(26, 25, 25, 0.8); 
+    }
+
+    .progress {        
+        margin-top: 1.1%;        
+        margin-left: auto;        
+        margin-right: auto;        
+        background-color: rgb(83, 59, 15);        
+        height: 15px;        
+        width: 68%;    
+    }    
+    .progress-bar {        
+        background-color: #4caf50;        
+        height: 100%;    
+    }    
+
+    .btnS {           
+        margin-top: 3%;        
+        text-align: center;
+    } 
+    .btnSair {  
+        height: 60px;
+        width: 21%;              
+        border-radius: 20px;        
+        font-size: 40px;        
+        box-shadow: 10px 10px 10px rgba(26, 25, 25, 0.8);        
+        box-sizing: border-box;        
+        transition: transform 100ms ease-in-out;  
+    }
+    .btnSair:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}

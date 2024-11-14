@@ -1,0 +1,82 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback do Aluno</title>
+</head>
+<body>
+    <h1>,</h1>
+    <div id="nome"></div>
+    <div id="respostas"></div>
+
+    <button onclick="enviarRespostas()">Enviar Respostas</button>
+
+
+    <script>
+        // Recupere o nome do aluno do sessionStorage
+        const nome = sessionStorage.getItem('nomeAluno');
+
+
+
+
+
+
+
+
+
+
+
+        // tgkjailghjl~dgkhjk
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        // Exiba o nome do aluno na página
+        const nomeDiv = document.getElementById('nome');
+        nomeDiv.innerHTML = `Nome do Aluno: ${nome}`;
+
+        // Recupere as respostas do sessionStorage
+        const respostas = {
+            1: sessionStorage.getItem('a1'),
+            2: sessionStorage.getItem('a2'),
+            3: sessionStorage.getItem('a3'),
+            4: sessionStorage.getItem('a4'),
+            5: sessionStorage.getItem('a5'),
+            6: sessionStorage.getItem('a6'),
+            7: sessionStorage.getItem('a7'),
+            8: sessionStorage.getItem('a8'),
+            9: sessionStorage.getItem('a9')
+        };
+
+        // Exiba as respostas na página
+        const respostasDiv = document.getElementById('respostas');
+        for (const pergunta in respostas) {
+            if (respostas[pergunta] !== null) {
+                respostasDiv.innerHTML += `Questão ${pergunta}: ${respostas[pergunta]}\n`;
+            }
+        }
+
+        // Função para enviar as respostas por e-mail
+        function enviarRespostas() {
+            // Envie as respostas para o professor por e-mail
+            const professorEmail = 'vilalvaalencar13@gmail.com';
+           //const corpoEmail = nomeDiv.innerHTML + JSON.stringify(respostas, null, 2);
+            const corpoEmail = nomeDiv.innerHTML + '\n\n' + respostasDiv.innerHTML;
+            window.location.href = 'mailto:' + professorEmail + '?subject=Respostas do Questionário&body=' + encodeURIComponent(corpoEmail);
+        }
+    </script>
+</body>
+</html>

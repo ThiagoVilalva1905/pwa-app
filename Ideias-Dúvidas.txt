@@ -1,0 +1,1 @@
+1- Armazenar os resultados das perguntas e dar uma nota no final? ou, mostrar quantas acertou de quantas tinha no total?

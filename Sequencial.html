@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+    <link rel="stylesheet" href="styleQuestoes.css">
+</head>
+<body>
+    <div class="cx_perguntas">
+        <div class="pergunta">
+            <span>Que nome leva o limite territorial que divide dois países?</span>
+        </div>
+
+        <div class="alternativas">
+            <input type="radio" name="a1" value="Errou">
+            <span>Divisa</span>
+        </div>
+        <div class="alternativas">
+            <input type="radio" name="a1" value="Errou">
+            <span>Linha</span>
+        </div>
+        <div class="alternativas">
+            <input type="radio" name="a1" value="Errou">
+            <span>Rua</span>
+        </div>
+        <div class="alternativas">
+            <input type="radio" name="a1" value="Acertou">
+            <span>Fronteira</span>
+        </div>
+
+        <button class="btnEnviar" onclick="salvarResposta('a1')">Enviar</button>
+    </div>
+
+    <div>
+        <a href="Quiz.html"><button class="btnSair">Sair para o menu</button></a>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar" style="width: 0%;"></div>
+    </div>
+
+    <script>
+        // Registra o tempo inicial ao carregar a página
+            sessionStorage.setItem('startTime', Date.now());
+
+        function salvarResposta(pergunta) {
+            const selectedAnswer = document.querySelector(`input[name="${pergunta}"]:checked`);
+            const respostaCorreta = document.querySelector(`input[name="${pergunta}"][value="Acertou"]`);
+
+            if (selectedAnswer) {
+                if (selectedAnswer.value === "Acertou") {
+                    selectedAnswer.parentElement.style.backgroundColor = "green"; // Alternativa correta
+                } else {
+                    selectedAnswer.parentElement.style.backgroundColor = "red"; // Alternativa incorreta
+                    respostaCorreta.parentElement.style.backgroundColor = "green"; // Destacar a resposta correta
+                }
+
+                sessionStorage.setItem(pergunta, selectedAnswer.value);
+
+                // Adicione um atraso de 1 segundo (1000 milissegundos) antes de redirecionar
+                setTimeout(() => {
+                    window.location.href = 'Q9.html'; // Redireciona para a próxima pergunta
+                }, 1000);
+            }
+
+            const totalPerguntas = 9; // Total de perguntas no questionário
+            const perguntasRespondidas = 1; // Atualize conforme o usuário responde
+
+            const progresso = (perguntasRespondidas / totalPerguntas) * 100;
+            document.querySelector('.progress-bar').style.width = `${progresso}%`;
+        }
+    </script>
+</body>
+</html>

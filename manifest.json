@@ -1,0 +1,23 @@
+{
+    "short_name": "Meu PWA",
+    "name": "Meu Progressive Web App",
+    "icons": [
+      {
+        "src": "iconTeste.png",
+        "type": "image/png",
+        "sizes": "500x500"
+      }
+    ],
+    "start_url": "Quiz.html",
+    "background_color": "#006400",
+    "display": "standalone",
+    "screenshots": [
+        {
+          "src": "Sem-Título-2.png",
+          "sizes": "1280x720",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+  }
+  
