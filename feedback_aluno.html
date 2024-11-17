@@ -12,7 +12,7 @@
     <h2 id="nome"></h2>
 
     <div class="cx_resultados">
-        <h3 id="acertos"></h3>  
+        <h3 id="acertos"></h3> 
     </div>
 
     <script>
@@ -24,7 +24,7 @@
         nomeDiv.innerHTML = `<p>Nome: ${nome}</p>`;
 
         // Recupera as respostas do sessionStorage e verifica acertos
-        let acertos = 0;
+        let acertos = 1;
         for (let i = 1; i <= 9; i++) {
             const resposta = sessionStorage.getItem(`a${i}`);
             if (resposta === 'Acertou') {
@@ -35,36 +35,10 @@
         // Exibe o resultado de acertos
         const acertosDiv = document.getElementById('acertos');
         acertosDiv.innerHTML = `Acertos: ${acertos}/9`;
-
-        // Obter a data e hora atuais
-        const dataHora = new Date().toLocaleString();
-
-        // Envia as informações do aluno para o servidor
-        fetch('https://quiz-server-2avz.onrender.com/saveQuiz', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                nome: nome,
-                respostasCorretas: acertos,
-                dataHora: dataHora
-            })
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log('Dados enviados com sucesso!');
-            } else {
-                console.error('Erro ao enviar dados.');
-            }
-        })
-        .catch(error => {
-            console.error('Erro na conexão com o servidor:', error);
-        });
     </script>
 
     <div>
-        <a href="index.html" onclick="sessionStorage.clear();"><button class="btnSair">Sair para o menu</button></a>
+        <a href="Quiz.html" onclick="sessionStorage.clear();"><button class="btnSair">Sair para o menu inicial</button></a>
     </div>
 </body>
 </html>
