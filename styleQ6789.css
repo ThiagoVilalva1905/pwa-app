@@ -10,124 +10,31 @@ body {
     background-image: url('pp1.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center right;
+    background-position: center;
     background-attachment: fixed;
-}
-
-/* Estilos para teste */
-@media (max-width: 300px) {
-
-    .cx_perguntas {
-        margin-top: 40%;
-        width: 87%;
-        height: 285px;
-        background-color: #ffffffee;
-        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
-        border-style:solid;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    .pergunta {
-        background-color: rgb(83, 59, 15);
-        color: #fff;
-        padding: 8px;
-        border-radius: 15px 15px 0 0;
-        font-size: 16px;
-    }
-
-    .alternativas {        
-        margin-top: 12px;        
-        margin-left: 8px;    
-    }    
-    .alternativas label {        
-        display: block;        
-        padding: 3px;        
-        border: 1px solid #ddd;        
-        margin-right: 4%;        
-        cursor: pointer;        
-        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out, background-color 100ms ease-in-out;        
-        box-shadow: 2px 2px 2px 2px rgb(83, 59, 15);    
-    }    
-    .alternativas input {        
-        display: none;    
-    }    
-    .alternativas input:checked + span {        
-        background-color: #add8e6; /* cor de fundo azul para a alternativa selecionada */    
-        display: block;
-        padding: 6px;
-        border: 0px solid #ddd;
-        margin: 0px;
-        transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out, background-color 100ms ease-in-out;
-    }    
-    .alternativas span {        
-        font-size: 15px;        
-        color: #000;    
-    }
-
-    .btnEnv{
-        margin-top: -22%;
-        margin-left: 64%;
-    }
-
-    .btnEnviar{
-        font-size: 18px;
-        background: rgb(83, 59, 15);
-        color:#fff;
-        width: 62%;   
-        height: 30px;     
-        border-radius: 10px;
-        box-shadow: 5px 5px 5px rgb(26, 25, 25); 
-        box-sizing: border-box;
-        transition: transform 100ms ease-in-out;
-    }
-
-    .btnEnviar:hover {
-        transform: scale(1.05);
-        cursor: pointer;
-    }
-
-    .progress {
-        margin-top: 3%;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgb(83, 59, 15);
-        height: 10px;
-        width: 74%;
-    }
-    
-    .progress-bar {
-        background-color: #4caf50;
-        height: 100%;
-    }
-    
-    .btnS {           
-        margin-top: 10%;        
-        text-align: center;
-    } 
-    .btnSair {  
-        height: 35px;
-        width: 80%;              
-        border-radius: 20px;        
-        font-size: 20px;        
-        box-shadow: 10px 10px 10px rgb(26, 25, 25);        
-        box-sizing: border-box;        
-        transition: transform 100ms ease-in-out;    
-    }
-    .btnSair:hover {
-        transform: scale(1.05);
-        cursor: pointer;
-    }
-
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
 }
 
 /* Estilos para Smartphones (telas pequenas) */
-@media (min-width: 301px) and (max-width: 600px) {
+@media (max-width: 600px) {
+
+    body {
+        background-image: url('pp3.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+    }
 
     .cx_perguntas {
         margin-top: 34%;
         width: 73%;
-        height: 380px;
+        height: 390px;
         background-color: #ffffffee;
         box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
         border-radius: 5px;

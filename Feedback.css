@@ -70,68 +70,19 @@ button:hover {
 }
 
 /* Estilos para Smartphones (telas pequenas) */
-@media (max-width: 300px) {
-    h1 {
-        margin-top: 35%;
-        font-size: 35px;
-        text-align: center;
+@media (max-width: 600px) {
+    body {
+        background-image: url('pp4.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center right;
+        background-attachment: fixed;
     }
     
-    h2{
-        margin-top: 2%;                    
-        font-size: 25px;
-        text-align: center;
-    }
-    
-    .cx_resultados{
-        text-align: center;
-        margin-top: 5%;
-        width: 70%;
-        height: 200px;
-        background-color: #ffffffb0;
-        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
-        border-radius: 1000px;
-        border-style:solid;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    h3{
-        font-size: 45px;
-        text-align: center;
-        margin-top: 26%;
-    }
-    
-    
-    button {
-        display: block;
-        background-color: whitesmoke;
-        margin-right: auto;
-        margin-left: auto;
-        width: 240px;
-        height: 35px;
-        border-radius: 20px;
-        margin-top: 8%;
-        font-size: 20px;
-        box-shadow: 10px 10px 10px rgb(26, 25, 25);
-        box-sizing: border-box;
-        transition: transform 100ms ease-in-out;
-        margin-bottom: 5%;
-    }
-    
-    button:hover {
-        transform: scale(1.05);
-        cursor: pointer;
-    }
-
-}
-
-/* Estilos para Smartphones (telas pequenas) */
-@media (min-width: 301px) and (max-width: 600px) {
     h1 {
         font-size: 50px;
         text-align: center;
-        margin-top: 30%;
+        margin-top: 35%;
     }
     
     h2{
@@ -185,6 +136,14 @@ button:hover {
 
 /* Estilos para Tablets (telas médias) */
 @media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        background-image: url('pp4.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center right;
+        background-attachment: fixed;
+    }
+    
     h1 {
         font-size: 60px;
         text-align: center;
