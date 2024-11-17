@@ -16,7 +16,7 @@
     </div>
 
     <script>
-
+        // Verifica se o service worker pode ser registrado
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('service-worker.js')
             .then(registration => {
@@ -27,8 +27,25 @@
             });
         };
 
-        
-      </script>
+        // Função para salvar o nome no sessionStorage
+        document.getElementById('saveNameBtn').addEventListener('click', function() {
+            var userName = document.getElementById('userName').value;
+            if (userName) {
+                sessionStorage.setItem('nome', userName); // Salva o nome no sessionStorage
+                alert('Nome salvo com sucesso!');
+            } else {
+                alert('Por favor, insira um nome!');
+            }
+        });
+
+        // (Opcional) Verificar se o nome já está salvo no sessionStorage e exibir uma saudação
+        window.onload = function() {
+            var storedName = sessionStorage.getItem('nome');
+            if (storedName) {
+                alert('Bem-vindo de volta, ' + storedName + '!');
+            }
+        };
+    </script>
      
 </body>
 </html>
