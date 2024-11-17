@@ -19,7 +19,7 @@
     <div>
         <label for="userName">Digite seu nome:</label>
         <input type="text" id="userName" placeholder="Seu nome">
-        <button id="saveNameBtn">Salvar Nome</button>
+        <button id="startBtn">Iniciar</button>
     </div>
 
     <script>
@@ -35,7 +35,7 @@
         };
 
         // Função para salvar o nome no sessionStorage
-        document.getElementById('saveNameBtn').addEventListener('click', function() {
+        document.getElementById('starBtn').addEventListener('click', function() {
             var userName = document.getElementById('userName').value;
             if (userName) {
                 sessionStorage.setItem('nome', userName); // Salva o nome no sessionStorage
