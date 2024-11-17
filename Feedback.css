@@ -8,11 +8,11 @@
 }
 
 body {
-    background-image: url('pantanal2blur.png');
+    background-image: url('pp2.png');
     background-repeat: no-repeat;
-    background-size: 100%; /* Garante que a imagem cubra toda a tela */
-    background-position-y: 100%; /* Centraliza a imagem */
-    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    background-size: cover;
+    background-position: center right;
+    background-attachment: fixed;
 }
 
 .cx_resultados{
@@ -69,20 +69,12 @@ button:hover {
     cursor: pointer;
 }
 
-
 /* Estilos para Smartphones (telas pequenas) */
-@media (max-width: 600px) {
-    body {
-        background-image: url('pantanal2blur.png');
-        background-repeat: no-repeat;
-        background-size: cover; /* Garante que a imagem cubra toda a tela */
-        background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
-    }
-
+@media (max-width: 300px) {
     h1 {
-        font-size: 50px;
+        margin-top: 35%;
+        font-size: 35px;
         text-align: center;
-        margin-top: 30%;
     }
     
     h2{
@@ -94,9 +86,8 @@ button:hover {
     .cx_resultados{
         text-align: center;
         margin-top: 5%;
-        font-size: 80px;
         width: 70%;
-        height: 270px;
+        height: 200px;
         background-color: #ffffffb0;
         box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
         border-radius: 1000px;
@@ -106,7 +97,7 @@ button:hover {
     }
 
     h3{
-        font-size: 60px;
+        font-size: 45px;
         text-align: center;
         margin-top: 26%;
     }
@@ -118,10 +109,67 @@ button:hover {
         margin-right: auto;
         margin-left: auto;
         width: 240px;
+        height: 35px;
+        border-radius: 20px;
+        margin-top: 8%;
+        font-size: 20px;
+        box-shadow: 10px 10px 10px rgb(26, 25, 25);
+        box-sizing: border-box;
+        transition: transform 100ms ease-in-out;
+        margin-bottom: 5%;
+    }
+    
+    button:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+}
+
+/* Estilos para Smartphones (telas pequenas) */
+@media (min-width: 301px) and (max-width: 600px) {
+    h1 {
+        font-size: 50px;
+        text-align: center;
+        margin-top: 30%;
+    }
+    
+    h2{
+        margin-top: 2%;                    
+        font-size: 27px;
+        text-align: center;
+    }
+    
+    .cx_resultados{
+        text-align: center;
+        margin-top: 5%;
+        width: 65%;
+        height: 250px;
+        background-color: #ffffffb0;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 1000px;
+        border-style:solid;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h3{
+        font-size: 57px;
+        text-align: center;
+        margin-top: 28%;
+    }
+    
+    
+    button {
+        display: block;
+        background-color: whitesmoke;
+        margin-right: auto;
+        margin-left: auto;
+        width: 75%;
         height: 40px;
         border-radius: 20px;
         margin-top: 8%;
-        font-size: 25px;
+        font-size: 23px;
         box-shadow: 10px 10px 10px rgb(26, 25, 25);
         box-sizing: border-box;
         transition: transform 100ms ease-in-out;
@@ -137,33 +185,23 @@ button:hover {
 
 /* Estilos para Tablets (telas médias) */
 @media (min-width: 601px) and (max-width: 1024px) {
-    
-    body {
-        background-image: url('pantanal2blur.png');
-        background-repeat: no-repeat;
-        background-size: 120%; /* Garante que a imagem cubra toda a tela */
-        background-position-y: 100%; /* Centraliza a imagem */
-        background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
-    }
-
     h1 {
-        font-size: 70px;
+        font-size: 60px;
         text-align: center;
         margin-top: 8%;
     }
     
     h2{
-        margin-top: 2%;
-        font-size: 35px;
+        margin-top: 1.5%;
+        font-size: 45px;
         text-align: center;
     }
     
     .cx_resultados{
         text-align: center;
-        margin-top: 3%;
-        font-size: 80px;
-        width: 430px;
-        height: 370px;
+        margin-top: 2%;
+        width: 45%;
+        height: 380px;
         background-color: #ffffffb0;
         box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
         border-radius: 1000px;
@@ -175,7 +213,7 @@ button:hover {
     h3{
         font-size: 90px;
         text-align: center;
-        margin-top: 20%;
+        margin-top: 24%;
     }
     
     
@@ -184,11 +222,11 @@ button:hover {
         background-color: whitesmoke;
         margin-right: auto;
         margin-left: auto;
-        width: 270px;
-        height: 50px;
+        width: 63%;
+        height: 57px;
         border-radius: 20px;
-        margin-top: 4%;
-        font-size: 30px;
+        margin-top: 3%;
+        font-size: 40px;
         box-shadow: 10px 10px 10px rgb(26, 25, 25);
         box-sizing: border-box;
         transition: transform 100ms ease-in-out;
@@ -203,7 +241,6 @@ button:hover {
 
 /* Estilos para Computadores (telas grandes) */
 @media (min-width: 1025px) and (max-width: 1919px) {
-    
     h1 {
         font-size: 60px;
         text-align: center;
@@ -238,8 +275,8 @@ button:hover {
     
     button {
         height: 40px;
-        width: 23%;              
-        border-radius: 18px;        
+        width: 26%;              
+        border-radius: 12px;        
         font-size: 30px;        
         box-shadow: 5px 5px 5px rgba(26, 25, 25, 0.8);        
         box-sizing: border-box;        
@@ -254,7 +291,6 @@ button:hover {
 
 /* Estilos para Televisões (telas extra grandes) */
 @media (min-width: 1920px) {    
-    
     h1 {
         font-size: 80px;
         text-align: center;
@@ -263,15 +299,15 @@ button:hover {
     
     h2{
         margin-top: 1%;
-        font-size: 40px;
+        font-size: 45px;
         text-align: center;
     }
     
     .cx_resultados{
         text-align: center;
         margin-top: 2%;
-        width: 25%;
-        height: 470px;
+        width: 23%;
+        height: 450px;
         background-color: #ffffffb0;
         box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
         border-radius: 1000px;
@@ -288,10 +324,10 @@ button:hover {
     
     
     button {
-        height: 45px;
-        width: 17%;              
-        border-radius: 18px;        
-        font-size: 30px;        
+        height: 60px;
+        width: 25%;              
+        border-radius: 14px;        
+        font-size: 43px;        
         box-shadow: 5px 5px 5px rgba(26, 25, 25, 0.8);        
         box-sizing: border-box;        
         transition: transform 100ms ease-in-out;   

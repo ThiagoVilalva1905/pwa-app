@@ -1,0 +1,472 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-decoration: none; */
+}
+
+body {
+    background-image: url('pp2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    background-attachment: fixed;
+}
+
+.cx_resultados{
+    text-align: center;
+    margin-top: 1%;
+    font-size: 2px;
+    width: 27%;
+    height: 340px;
+    background-color: #ffffffb0;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 1000px;
+    border-style:solid;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 3%;
+}
+
+h2{
+    font-size: 25px;
+    text-align: center;
+}
+
+h3{
+    font-size: 180px;
+    text-align: center;
+    margin-top: 20%;
+}
+
+
+button {
+    display: block;
+    background-color: whitesmoke;
+    margin-right: auto;
+    margin-left: auto;
+    width: 270px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    font-size: 30px;
+    box-shadow: 10px 10px 10px rgb(26, 25, 25);
+    box-sizing: border-box;
+    transition: transform 100ms ease-in-out;
+    margin-bottom: 5%;
+}
+
+button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Estilos novo para teste */
+@media (max-width: 300px) {
+    h1 { 
+        margin-top: 16%;
+        font-size: 25px;
+    }
+    
+    .cx_regras{
+        padding: 5px;
+        margin-top: 0.5%;        
+        width: 94%;        
+        height: 280px;        
+        background-color: #ffffffee;        
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);        
+        border-radius: 1px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto; 
+    }
+
+    h2{
+        font-weight: normal; /* Remove o negrito padrão */
+        margin-left: 8px;
+        text-align: start;
+        font-size: 13px;
+        margin-bottom: 3px; /* Ajuste conforme necessário */
+        margin-right: 2px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+    
+    .item{
+        margin-left: 15px;
+    }
+    
+    .item::before {
+        content: '●'; /* Símbolo de bolinha */
+        color: #000; /* Cor da bolinha, você pode ajustar */
+        margin-right: 5px; /* Espaço entre a bolinha e o texto */
+        font-size: 14px; /* Ajuste o tamanho da bolinha */
+    }
+
+    h3 { 
+        margin-top: 2%;
+        font-size: 22px;
+    }
+
+    .cx_creditos{
+        margin-top: 0.5%;
+        padding: 5px;        
+        width: 96%;        
+        height: 90px;        
+        background-color: #ffffffee;        
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);        
+        border-radius: 1px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto; 
+    }
+    
+    button {
+        margin-top: 10px;
+        height: 25px;
+        width: 60%;              
+        border-radius: 10px;        
+        font-size: 15px;        
+        box-shadow: 10px 10px 10px rgb(26, 25, 25);        
+        box-sizing: border-box;        
+        transition: transform 100ms ease-in-out;    
+    }
+    
+    button:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+}
+
+/* Estilos para Smartphones (telas pequenas) */
+@media (min-width: 301px) and (max-width: 600px) {
+    body {
+        height: 100vh;
+    }
+    
+    h1 { 
+        margin-top: 15%;
+        font-size: 25px;
+    }
+    
+    .cx_regras{
+        padding: 5px;
+        margin-top: 0.5%;        
+        width: 94%;        
+        height: 290px;        
+        background-color: #ffffffee;        
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);        
+        border-radius: 1px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto; 
+    }
+
+    h2{
+        font-weight: normal; /* Remove o negrito padrão */
+        margin-left: 8px;
+        text-align: start;
+        font-size: 16px;
+        margin-bottom: 3px; /* Ajuste conforme necessário */
+        margin-right: 2px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+    
+    .item{
+        margin-left: 15px;
+    }
+    
+    .item::before {
+        content: '●'; /* Símbolo de bolinha */
+        color: #000; /* Cor da bolinha, você pode ajustar */
+        margin-right: 5px; /* Espaço entre a bolinha e o texto */
+        font-size: 14px; /* Ajuste o tamanho da bolinha */
+    }
+
+    h3 { 
+        margin-top: 4%;
+        font-size: 22px;
+    }
+
+    .cx_creditos{
+        margin-top: 0.5%;
+        padding: 5px;        
+        width: 96%;        
+        height: 100px;        
+        background-color: #ffffffee;        
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);        
+        border-radius: 1px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto; 
+    }
+    
+    button {
+        margin-top: 5%;
+        height: 27px;
+        width: 60%;              
+        border-radius: 10px;        
+        font-size: 17px;        
+        box-shadow: 10px 10px 10px rgb(26, 25, 25);        
+        box-sizing: border-box;        
+        transition: transform 100ms ease-in-out;    
+    }
+    
+    button:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+}
+
+/* Estilos para Tablets (telas médias) */
+@media (min-width: 601px) and (max-width: 1023px) {
+    h1 { 
+        margin-top: 7%;
+        font-size: 40px;
+    }
+    
+    .cx_regras{
+        padding: 5px;
+        margin-top: 0.5%;        
+        width: 95%;        
+        height: 520px;        
+        background-color: #ffffffee;        
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);        
+        border-radius: 1px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto; 
+    }
+
+    h2{
+        font-weight: normal; /* Remove o negrito padrão */
+        margin-left: 8px;
+        text-align: start;
+        font-size: 32px;
+        margin-bottom: 3px; /* Ajuste conforme necessário */
+        margin-right: 2px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+    
+    .item{
+        margin-left: 15px;
+    }
+    
+    .item::before {
+        content: '●'; /* Símbolo de bolinha */
+        color: #000; /* Cor da bolinha, você pode ajustar */
+        margin-right: 5px; /* Espaço entre a bolinha e o texto */
+        font-size: 14px; /* Ajuste o tamanho da bolinha */
+    }
+
+    h3 { 
+        margin-top: 2%;
+        font-size: 40px;
+    }
+
+    .cx_creditos{
+        margin-top: 0.5%;
+        padding: 5px;        
+        width: 86%;        
+        height: 180px;        
+        background-color: #ffffffee;        
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);        
+        border-radius: 1px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto; 
+    }
+    
+    button {
+        margin-top: 2.7%;
+        height: 47px;
+        width: 52%;              
+        border-radius: 13px;        
+        font-size: 32px;        
+        box-shadow: 10px 10px 10px rgb(26, 25, 25);        
+        box-sizing: border-box;        
+        transition: transform 100ms ease-in-out;    
+    }
+    
+    button:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+}
+
+/* Estilos para Computadores (telas grandes) */
+@media (min-width: 1024px) and (max-width: 1919px) {
+    h1 { 
+        margin-top: 3%;
+        font-size: 40px;
+    }
+    
+    .cx_regras{
+        padding: 5px;
+        margin-top: 0.5%;        
+        width: 90%;        
+        height: 275px;        
+        background-color: #ffffffee;        
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);        
+        border-radius: 1px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto; 
+    }
+
+    h2{
+        font-weight: normal; /* Remove o negrito padrão */
+        margin-left: 8px;
+        text-align: start;
+        font-size: 24px;
+        margin-bottom: 3px; /* Ajuste conforme necessário */
+        margin-right: 2px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+    
+    .item{
+        margin-left: 15px;
+    }
+    
+    .item::before {
+        content: '●'; /* Símbolo de bolinha */
+        color: #000; /* Cor da bolinha, você pode ajustar */
+        margin-right: 5px; /* Espaço entre a bolinha e o texto */
+        font-size: 14px; /* Ajuste o tamanho da bolinha */
+    }
+
+    h3 { 
+        margin-top: 1.2%;
+        font-size: 40px;
+    }
+
+    .cx_creditos{
+        margin-top: 0.5%;
+        padding: 5px;        
+        width: 48%;        
+        height: 135px;        
+        background-color: #ffffffee;        
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);        
+        border-radius: 1px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto; 
+    }
+    
+    button {
+        margin-top: 1.2%;
+        height: 40px;
+        width: 29%;              
+        border-radius: 13px;        
+        font-size: 26px;        
+        box-shadow: 10px 10px 10px rgb(26, 25, 25);        
+        box-sizing: border-box;        
+        transition: transform 100ms ease-in-out;    
+    }
+    
+    button:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+
+/* Estilos para Televisões (telas extra grandes) */
+@media (min-width: 1920px) {    
+      
+    h1 { 
+        margin-top: 5%;
+        font-size: 70px;
+    }
+    
+    .cx_regras{
+        padding: 5px;
+        margin-top: 0.5%;        
+        width: 90%;        
+        height: 310px;        
+        background-color: #ffffffee;        
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);        
+        border-radius: 1px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto; 
+    }
+
+    h2{
+        font-weight: normal; /* Remove o negrito padrão */
+        margin-left: 8px;
+        text-align: start;
+        font-size: 33px;
+        margin-bottom: 3px; /* Ajuste conforme necessário */
+        margin-right: 2px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+    
+    .item{
+        margin-left: 15px;
+    }
+    
+    .item::before {
+        content: '●'; /* Símbolo de bolinha */
+        color: #000; /* Cor da bolinha, você pode ajustar */
+        margin-right: 5px; /* Espaço entre a bolinha e o texto */
+        font-size: 14px; /* Ajuste o tamanho da bolinha */
+    }
+
+    h3 { 
+        margin-top: 1.8%;
+        font-size: 70px;
+    }
+
+    .cx_creditos{
+        margin-top: 0.5%;
+        padding: 5px;        
+        width: 40%;        
+        height: 200px;        
+        background-color: #ffffffee;        
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);        
+        border-radius: 1px;        
+        border-style: solid;        
+        margin-right: auto;        
+        margin-left: auto; 
+    }
+    
+    button {
+        height: 56px;
+        width: 26%;              
+        border-radius: 10px;        
+        font-size: 43px;        
+        box-shadow: 10px 10px 10px rgb(26, 25, 25);        
+        box-sizing: border-box;        
+        transition: transform 100ms ease-in-out;    
+    }
+    
+    button:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}

@@ -6,12 +6,12 @@
     /* text-decoration: none; */
 }
 
-body { 
-    background-image: url('pantanal.jpg');
-    background-repeat: no-repeat; 
-    background-size: cover; /* Garante que a imagem cubra toda a tela */
-    background-position: center; /* Centraliza a imagem */
-    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+body {
+    background-image: url('pp1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -33,7 +33,7 @@ button {
     margin: 70px auto 0 auto;
     width: 400px;
     height: 50px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 40px;
     box-shadow: 10px 10px 10px rgb(26, 25, 25);
     box-sizing: border-box;
@@ -45,10 +45,28 @@ button:hover {
     cursor: pointer;
 }
 
-/* Estilos para Smartphones (telas pequenas) */
-@media (max-width: 600px) {
+/* Estilo para teste */
+@media (max-width: 300px) {
     h1 {
-        margin-top: 45%;
+        margin-top: 40%;
+        text-align: center;
+        font-size: 50px;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    button {
+        width: 50%;
+        font-size: 25px;
+        height: 40px;
+        margin-top: 30px;
+    }
+}
+
+/* Estilos para Smartphones (telas pequenas) */
+@media (min-width: 301px) and (max-width: 600px) {
+    h1 {
+        margin-top: 40%;
         text-align: center;
         font-size: 40px;
         width: 80%;
@@ -61,54 +79,39 @@ button:hover {
         height: 40px;
         margin-top: 30px;
     }
-
-    body {
-        background-size: cover; /* Mantém a imagem de fundo cobrindo a tela */
-        background-position: center; /* Centraliza a imagem */
-    }
 }
 
 /* Estilos para Tablets (telas médias) */
 @media (min-width: 601px) and (max-width: 1023px) {
     h1 {
-        margin: 150px auto 0 auto;
-        font-size: 50px;
-        width: 70%;
+        margin: 50% auto 0 auto;
+        font-size: 60px;
+        width: 80%;
         margin-bottom: 50px;
     }
 
     button {
         margin-top: 30px;
-        width: 38%;
-        font-size: 30px;
-        height: 45px;
-    }
-
-    body {
-        background-size: cover; /* Mantém a imagem de fundo cobrindo a tela */
-        background-position: center; /* Centraliza a imagem */
+        width: 28%;
+        font-size: 40px;
+        height: 60px;
     }
 }
 
 /* Estilos para Computadores (telas grandes) */
 @media (min-width: 1024px) and (max-width: 1919px) {
     h1 {
-        margin: 140px auto 0 auto;
+        margin: 15% auto 0 auto;
         font-size: 50px;
-        width: 60%;
+        width: 65%;
         margin-bottom: 50px;
     }
 
     button {
         margin-top: 40px;
-        width: 25%;
+        width: 18%;
         font-size: 30px;
         height: 50px;
-    }
-
-    body {
-        background-size: cover; /* Mantém a imagem de fundo cobrindo a tela */
-        background-position: center; /* Centraliza a imagem */
     }
 }
 
@@ -121,13 +124,8 @@ button:hover {
     }
 
     button {
-        width: 25%;
+        width: 15%;
         font-size: 45px;
         height: 60px;
-    }
-
-    body {
-        background-size: cover; /* Mantém a imagem de fundo cobrindo a tela */
-        background-position: center; /* Centraliza a imagem */
     }
 }
