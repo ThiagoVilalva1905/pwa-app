@@ -17,11 +17,15 @@
 
     <script>
         // Recupera o nome do aluno do sessionStorage
-        const nome = sessionStorage.getItem('nomeAluno');
+        const nome = sessionStorage.getItem('nome');
         
-        // Exibe o nome do aluno na página
+        // Verifica se o nome existe e exibe na página
         const nomeDiv = document.getElementById('nome');
-        nomeDiv.innerHTML = `<p>Nome: ${nome}</p>`;
+        if (nome) {
+            nomeDiv.innerHTML = `<p>Nome: ${nome}</p>`;
+        } else {
+            nomeDiv.innerHTML = '<p>Nome não encontrado. Por favor, inicie o quiz corretamente.</p>';
+        }
 
         // Recupera as respostas do sessionStorage e verifica acertos
         let acertos = 1;
