@@ -6,10 +6,9 @@
     <title>Quiz</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    
 </head>
 <body>
-
+    
     <div>
         <h1>Sejam bem-vindos ao Quiz!</h1>
     </div>
@@ -20,7 +19,6 @@
         <input type="text" id="userName" placeholder="Seu nome aqui">
         <button id="startBtn">Iniciar</button>
     </div>
-
 
     <script>
         // Verifica se o service worker pode ser registrado
@@ -34,12 +32,13 @@
             });
         };
 
-        // Função para salvar o nome no sessionStorage
-        document.getElementById('starBtn').addEventListener('click', function() {
+        // Função para iniciar o quiz, salvar o nome e redirecionar
+        document.getElementById('startBtn').addEventListener('click', function() {
             var userName = document.getElementById('userName').value;
             if (userName) {
                 sessionStorage.setItem('nome', userName); // Salva o nome no sessionStorage
-                alert('Nome salvo com sucesso!');
+                // Redireciona para a página do jogo
+                window.location.href = 'Regras_e_Creditos.html'; // Aqui você coloca o link correto para iniciar o quiz
             } else {
                 alert('Por favor, insira um nome!');
             }
@@ -53,6 +52,6 @@
             }
         };
     </script>
-     
+
 </body>
 </html>
