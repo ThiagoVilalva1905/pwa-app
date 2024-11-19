@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 6</title>
+    <link rel="stylesheet" href="styleQ6789.css">
+</head>
+<body>
+    <div class="cx_perguntas">
+        <div class="pergunta">
+            <span>Cerro Akuá estava localizado no município de Pedro Juan Caballero. Responda essa afirmação com Verdadeiro ou Falso:</span>
+        </div>
+        <div class="alternativas">
+            <label>
+                <input type="radio" name="a6" value="Acertou">
+                <span>Verdadeiro</span>
+            </label>
+        </div>
+        <div class="alternativas">
+            <label>
+                <input type="radio" name="a6" value="Errou">
+                <span>Falso</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="btnEnv">
+        <button class="btnEnviar" onclick="salvarResposta('a6')">Enviar</button>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar"></div>
+    </div>
+
+    <div class="btnS">
+        <a href="index.html" onclick="sessionStorage.clear();"><button class="btnSair">Voltar ao modo de jogo</button></a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+    <link rel="stylesheet" href="styleQ1234.css">
+</head>
+<body>
+    <div class="cx_perguntas">
+        <div class="pergunta">
+            <span>Houve vencedor na Guerra do Paraguai, se sim, quais países?</span>
+        </div>
+        <div class="alternativas">
+            <label>
+                <input type="radio" name="a4" value="Errou">
+                <span>Nenhum</span>
+            </label>
+        </div>
+        <div class="alternativas">
+            <label>
+                <input type="radio" name="a4" value="Errou">
+                <span>Chile, Brasil e Uruguai</span>
+            </label>
+        </div>
+        <div class="alternativas">
+            <label>
+                <input type="radio" name="a4" value="Acertou">
+                <span>Uruguai, Brasil e Argentina</span>
+            </label>
+        </div>
+        <div class="alternativas">
+            <label>
+                <input type="radio" name="a4" value="Errou">
+                <span>Chile, Bolívia e Peru</span>
+            </label>
+        </div>
+    </div>
+    
+    <div class="btnEnv">
+        <button class="btnEnviar" onclick="salvarResposta('a4')">Enviar</button>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar"></div>
+    </div>
+
+    <div class="btnS">
+        <a href="index.html" onclick="sessionStorage.clear();"><button class="btnSair">Voltar ao modo de jogo</button></a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Aleatório</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="startQuiz(true)">
+    <div>
+        <h1>Iniciando o quiz no modo aleatório...</h1>
+    </div>
+    <script>
+        // Função para embaralhar o array de perguntas
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Função para iniciar o quiz no modo aleatório
+        function startQuiz(random = true) {
+            const questions = ["questrvl.html", "questafi.html", "questvei.html", "questilv.html", "questfrl.html", "questela.html", "questavl.html", "questirf.html", "questrev.html"];
+            let questionsOrder = random ? shuffle([...questions]) : [...questions];
+
+            // Armazenar a ordem embaralhada e o índice inicial caso ainda não estejam configurados
+            if (!sessionStorage.getItem('questionsOrder')) {
+                sessionStorage.setItem('questionsOrder', JSON.stringify(questionsOrder));
+                sessionStorage.setItem('currentQuestionIndex', 0);
+            }
+
+            // Direcionar para a primeira pergunta da ordem
+            const currentIndex = parseInt(sessionStorage.getItem('currentQuestionIndex'), 10);
+            window.location.href = JSON.parse(sessionStorage.getItem('questionsOrder'))[currentIndex];
+        }
+    </script>
+    <script src="script.js"></script> <!-- Certifique-se de incluir o script.js aqui -->
+</body>
+</html>

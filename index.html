@@ -15,8 +15,7 @@
 
     <!-- Campo para o usuário digitar o nome -->
     <div>
-        <label for="userName">Digite seu nome:</label>
-        <input type="text" id="userName" placeholder="Seu nome aqui">
+        <input type="text" id="userName" placeholder="Insira seu nome aqui:">
         <button id="startBtn">Iniciar</button>
     </div>
 
@@ -32,13 +31,14 @@
             });
         };
 
-        // Função para iniciar o quiz, salvar o nome e redirecionar
+        // Função para iniciar o quiz, salvar o nome e redirecionar para a página de modo de jogo
         document.getElementById('startBtn').addEventListener('click', function() {
             var userName = document.getElementById('userName').value;
             if (userName) {
                 sessionStorage.setItem('nome', userName); // Salva o nome no sessionStorage
-                // Redireciona para a página do jogo
-                window.location.href = 'Regras_e_Creditos.html'; // Aqui você coloca o link correto para iniciar o quiz
+                console.log('Nome salvo: ', userName);
+                // Redireciona para a página de modo de jogo
+                window.location.href = 'modo_de_jogo.html'; // Aqui você coloca o link correto para a página de modo de jogo
             } else {
                 alert('Por favor, insira um nome!');
             }
@@ -52,6 +52,6 @@
             }
         };
     </script>
-
+    <script src="script.js"></script> <!-- Certifique-se de incluir o script.js aqui -->
 </body>
 </html>

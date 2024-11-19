@@ -48,6 +48,27 @@ button:hover {
     cursor: pointer;
 }
 
+input[type="text"] {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    margin: 20px auto;
+    width: 700px; /* Aumentado de 600px para 700px */
+    height: 60px; /* Aumentado para garantir espaçamento adequado */
+    border-radius: 10px;
+    font-size: 30px;
+    box-shadow: 5px 5px 10px rgb(26, 25, 25);
+    box-sizing: border-box;
+    padding: 15px; /* Aumentado de 10px para 15px */
+    border: none;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 25px; /* Reduzido para garantir que o texto caiba */
+}
+
+
+
 /* Estilos para Smartphones (telas pequenas) */
 @media (max-width: 600px) {
     body {
@@ -69,7 +90,7 @@ button:hover {
         margin-bottom: 50px;
     }
 
-    button {
+    button, input[type="text"] {
         width: 50%;
         font-size: 25px;
         height: 40px;
@@ -97,7 +118,7 @@ button:hover {
         margin-bottom: 50px;
     }
 
-    button {
+    button, input[type="text"] {
         margin-top: 30px;
         width: 28%;
         font-size: 40px;
@@ -114,7 +135,7 @@ button:hover {
         margin-bottom: 50px;
     }
 
-    button {
+    button, input[type="text"] {
         margin-top: 40px;
         width: 18%;
         font-size: 30px;
@@ -130,7 +151,7 @@ button:hover {
         width: 55%;
     }
 
-    button {
+    button, input[type="text"] {
         width: 15%;
         font-size: 45px;
         height: 60px;

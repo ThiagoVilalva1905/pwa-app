@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Sequencial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="startQuiz(false)">
+    <div>
+        <h1>Iniciando o quiz no modo sequencial...</h1>
+    </div>
+    <script>
+        // Função para iniciar o quiz no modo Sequencial
+        function startQuiz(random = false) {
+            const questions = ["questrvl.html", "questafi.html", "questvei.html", "questilv.html", "questfrl.html", "questela.html", "questavl.html", "questirf.html", "questrev.html"];
+            let questionsOrder = random ? shuffle([...questions]) : [...questions];
+
+            // Armazenar a ordem embaralhada e o índice inicial caso ainda não estejam configurados
+            if (!sessionStorage.getItem('questionsOrder')) {
+                sessionStorage.setItem('questionsOrder', JSON.stringify(questionsOrder));
+                sessionStorage.setItem('currentQuestionIndex', 0);
+            }
+
+            // Direcionar para a primeira pergunta da ordem
+            const currentIndex = parseInt(sessionStorage.getItem('currentQuestionIndex'), 10);
+            window.location.href = JSON.parse(sessionStorage.getItem('questionsOrder'))[currentIndex];
+        }
+    </script>
+    <script src="script.js"></script> <!-- Certifique-se de incluir o script.js aqui -->
+</body>
+</html>
