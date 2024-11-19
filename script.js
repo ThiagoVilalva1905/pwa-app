@@ -60,7 +60,6 @@ function nextQuestion() {
         window.location.href = questionsOrder[currentQuestionIndex];
     } else {
         window.location.href = 'feedback_aluno.html';
-        sessionStorage.clear(); // Limpar dados do quiz
     }
     console.log('Indo para a próxima pergunta:', currentQuestionIndex);
 }
