@@ -28,7 +28,7 @@
         }
 
         // Recupera as respostas do sessionStorage e verifica acertos
-        let acertos = 1;
+        let acertos = 0;
         for (let i = 1; i <= 9; i++) {
             const resposta = sessionStorage.getItem(`a${i}`);
             if (resposta === 'Acertou') {
