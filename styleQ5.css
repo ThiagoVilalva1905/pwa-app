@@ -230,7 +230,7 @@ body {
 /* Estilos para Computadores (telas grandes) - 1280/1366 x 768 */
 @media (min-width: 1024px) and (max-width: 1919px) {     
     .cx_perguntas {        
-        margin-top: 5%;        
+        margin-top: 3%;        
         width: 72%;        
         height: 515px;        
         background-color: #ffffffee;        
@@ -305,7 +305,7 @@ body {
     }    
 
     .btnS {           
-        margin-top: 2.5%;        
+        margin-top: 2%;        
         text-align: center;
     } 
     .btnSair {  
