@@ -6,7 +6,7 @@ self.addEventListener('install', (event) => {
         caches.open('my-cache').then((cache) => {
             return cache.addAll([
                 '/',
-                '/Quiz.html',
+                '/index.html',
           // Adicione outros arquivos que deseja armazenar em cache
             ]);
         })
